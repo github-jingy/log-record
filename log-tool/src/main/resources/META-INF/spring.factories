@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.yss.logrecord.tool.aspect.FeignAutoLogConfig,\
+com.yss.logrecord.tool.aspect.WebLogAspect

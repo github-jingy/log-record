@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: log-record
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: config-center
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER}
+  instance:
+    # 使用ip注册。
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 20
+    instance-id: ${spring.application.name}:${server.port}@${random.long(1000000,9999999)}

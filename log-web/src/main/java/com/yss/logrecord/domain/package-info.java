@@ -1,0 +1,1 @@
+package com.yss.logrecord.domain;
